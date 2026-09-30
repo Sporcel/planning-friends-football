@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "sporcel",
+    "name": "Planning Friends Football",
     "slug": "sporcel",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,11 +8,12 @@
     "scheme": "sporcel",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "bundleIdentifier": "com.sporcel.app"
     },
     "android": {
+      "package": "com.sporcel.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#1B7F3B",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
@@ -28,15 +29,29 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#1B7F3B",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "imageWidth": 200
+        }
+      ],
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Planning Friends Football necesita acceder a tus fotos para poner la foto de los jugadores.",
+          "cameraPermission": "Planning Friends Football necesita la cámara para hacer la foto de los jugadores."
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "fe3f8cb5-0683-4346-be26-69bb25d3980b"
+      }
     }
   }
 }
